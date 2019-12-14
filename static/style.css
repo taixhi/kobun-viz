@@ -1,0 +1,156 @@
+body, html{
+	margin: 0;
+	padding: 0;
+}
+body{
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	font-family: sans-serif;
+	color: #222;
+	font-size: 22px;
+	background: rgb(255,250,230);
+}
+h1{
+	text-align: center;
+	color: white;
+}
+.checkboxes {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 1rem;
+	border-radius: 8px;
+	/*border: solid black 1px;*/
+}
+.d-input__option:not(:last-child) {
+    margin-right: 1rem;
+}
+.d-input__option {
+    background: rgba(255,255,255,.9);
+    color: #1e1935;
+    padding: .35rem .75rem .35rem;
+    margin-bottom: .5rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.u-strong {
+    font-weight: 700;
+}
+.u-t-xs {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+.input-value {
+	padding: 2px;
+	border-radius: 2px;
+}
+.d-input__option__box {
+    font-size: 2em;
+    margin-right: .5rem;
+    position: relative;
+    bottom: .075em;
+}
+mark {
+	float: left;
+	padding: .2em .3em;
+	margin: 0em .25em;
+	line-height: 1;
+	display: inline-block;
+	border-radius: .25em;
+	background-color: transparent;
+	position: relative;
+}
+mark[has_katsuyo="true"]{
+	font-weight: 900;
+	cursor: pointer;
+}
+mark[has_katsuyo="true"] .tooltiptext {
+  writing-mode: horizontal-tb;
+  visibility: hidden;
+  color: #fff;
+  text-align: left;
+  padding: 0.5em;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+  background-color: black;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 5em;
+}
+
+
+mark:hover .tooltiptext {
+  visibility: visible;
+}
+[data-entity] {
+	padding: .2em .3em;
+	margin: 0.2em .25em;
+	line-height: 1;
+	display: inline-block;
+	border-radius: .25em;
+	background-color: transparent;
+}
+[data-entity]:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    content: attr(data-entity);
+    font-size: .55em;
+    line-height: 1;
+    padding: .35em .35em;
+    border-radius: .35em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin:.15rem 0 .15rem	 0;
+    background: #fff;
+    font-weight: 700;
+}
+textarea {
+	color: inherit;
+	background: #fff;
+	border-radius: 6px;
+	font-size: 14px;
+	padding: 1rem;
+	width: 100%;
+	float: right;
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 200px;
+	border: solid black 1px;
+}
+.panel {
+	display:flex;
+	flex-direction: column;
+	padding: 1em;
+	width: 300px;
+	writing-mode: horizontal-tb;
+	max-height: 95vh;
+	height: 100%;
+	min-height: 650px;
+	align-items: center;
+	justify-content: center;
+	background-color: #ff3377;
+}
+#credit{
+	font-size: 14px;
+	position:absolute;
+	text-decoration: none;
+	bottom: 10px;
+	left: 10px;
+	writing-mode: horizontal-tb;
+
+}
+.submit-button{
+	font-size: 18px;
+	width: 7em;
+	height: 2em;
+	margin: 0.4em;
+}

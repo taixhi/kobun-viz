@@ -1,0 +1,39 @@
+<html>
+<title>古文解析ツール　by　Taichi Kato</title>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body>
+	<p id="credit">©2019 <a href="https://taichikato.com">Taichi Kato</a></p>
+	<div class="panel">
+		<h1>古文解析<br>ツール</h1>
+		<textarea id="text" rows="5" cols="5" placeholder="文章を入力してください" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" onfocus="this.select()" class="textarea"></textarea>
+		<input class="submit-button" type="button" name="submit" value="解析">
+		<div class="checkboxes">
+			
+		</div>
+	</div>
+	<div class="container"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript"> // String format helper
+	String.prototype.formatUnicorn = String.prototype.formatUnicorn ||
+	function () {
+	    "use strict";
+	    var str = this.toString();
+	    if (arguments.length) {
+	        var t = typeof arguments[0];
+	        var key;
+	        var args = ("string" === t || "number" === t) ?
+	            Array.prototype.slice.call(arguments)
+	            : arguments[0];
+
+	        for (key in args) {
+	            str = str.replace(new RegExp("\\{" + key + "\\}", "gi"), args[key]);
+	        }
+	    }
+
+	    return str;
+	};
+</script>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+</script>
+</html>
