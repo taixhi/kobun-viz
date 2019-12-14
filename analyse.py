@@ -1,24 +1,6 @@
 from google.cloud import storage
 import MeCab
-
-def download_wakan():
-    """Downloads a blob from the bucket."""
-    # bucket_name = "your-bucket-name"
-    # source_blob_name = "storage-object-name"
-    # destination_file_name = "local/path/to/file"
-
-    storage_client = storage.Client()
-    bucket = storage_client.bucket('kobun-annotation')
-    blobs = bucket.list_blobs(prefix="wakan")  # Get list of files
-    for blob in blobs:
-        filename = blob.name.replace('/', '_') 
-        blob.download_to_filename('/tmp/wakan' + filename)  # Download
-
-    print(
-        "Blob {} downloaded to {}."
-    )
-download_wakan()
-mecab = MeCab.Tagger ('-d /tmp/wakan')
+mecab = MeCab.Tagger ('-d wakan')
 def analysePOS(text):
     mecab.parse('')#文字列がGCされるのを防ぐ
     node = mecab.parseToNode(text)
