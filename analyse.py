@@ -1,7 +1,7 @@
 import MeCab
 mecab = MeCab.Tagger ('-d wakan')
 def analysePOS(text):
-    mecab.parse('')#文字列がGCされるのを防ぐ
+    mecab.parse('')
     node = mecab.parseToNode(text)
     words = []
     while node:
@@ -15,6 +15,5 @@ def analysePOS(text):
                       'katsuyo_type': f[4], 
                       'katsuyo_kei': f[5], 
                       'pronounciation': f[6]})
-        #次の単語に進める
         node = node.next
     return words

@@ -1,3 +1,4 @@
 Flask
 mecab-python3
+gunicorn
 Werkzeug
