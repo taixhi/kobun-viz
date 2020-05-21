@@ -1,4 +1,3 @@
-from google.cloud import storage
 import MeCab
 mecab = MeCab.Tagger ('-d wakan')
 def analysePOS(text):
